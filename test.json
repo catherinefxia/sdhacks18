@@ -1,0 +1,156 @@
+[
+	{
+        "command": "cse3_prerequisite",
+        "description": "Answer prerequisites for cse 3",
+        "modified": "2018-10-13T23:22:44.066Z",
+        "__v": 0,
+        "created": "2018-10-13T20:36:10.491Z",
+        "script": [
+            {
+                "script": [
+                    {
+                        "text": [
+                            "None"
+                        ],
+                        "attachments": [],
+                        "collect": null
+                    },
+                    {
+                        "action": "complete"
+                    }
+                ],
+                "topic": "default"
+            },
+            {
+                "script": [
+                    {
+                        "text": [
+                            "Looks like you got distracted. We can continue later."
+                        ]
+                    },
+                    {
+                        "action": "timeout"
+                    }
+                ],
+                "topic": "on_timeout"
+            }
+        ],
+        "variables": [
+            {
+                "type": "string",
+                "name": "question_1"
+            },
+            {
+                "type": "string",
+                "name": "question_2"
+            },
+            {
+                "type": "string",
+                "name": "question_3"
+            }
+        ],
+        "triggers": [
+            {
+                "pattern": "prerequisite cse 3",
+                "type": "regexp",
+                "id": 193
+            },
+            {
+                "pattern": "What is the prerequisite for CSE 3?",
+                "type": "string",
+                "id": 288
+            },
+            {
+                "id": 55,
+                "type": "string",
+                "pattern": "cse3 prerequisite"
+            },
+            {
+                "pattern": "cse3_prerequisite",
+                "type": "string"
+            }
+        ],
+        "tags": []
+    }
+]
+
+
+
+
+
+
+[
+    {
+        "command": "cse100_prerequisite",
+        "description": "Answer prerequisites for cse 100",
+        "modified": "2018-10-13T23:33:13.943Z",
+        "__v": 0,
+        "created": "2018-10-13T20:36:10.491Z",
+        "script": [
+            {
+                "topic": "default",
+                "script": [
+                    {
+                        "collect": null,
+                        "attachments": [],
+                        "text": [
+                            "CSE 30, CSE 21 or MATH 184A"
+                        ]
+                    },
+                    {
+                        "action": "complete"
+                    }
+                ]
+            },
+            {
+                "topic": "on_timeout",
+                "script": [
+                    {
+                        "text": [
+                            "Looks like you got distracted. We can continue later."
+                        ]
+                    },
+                    {
+                        "action": "timeout"
+                    }
+                ]
+            }
+        ],
+        "variables": [
+            {
+                "name": "question_1",
+                "type": "string"
+            },
+            {
+                "name": "question_2",
+                "type": "string"
+            },
+            {
+                "name": "question_3",
+                "type": "string"
+            }
+        ],
+        "triggers": [
+            {
+                "id": 193,
+                "type": "regexp",
+                "pattern": "prerequisite cse 100"
+            },
+            {
+                "id": 288,
+                "type": "string",
+                "pattern": "What is the prerequisite for CSE 100?"
+            },
+            {
+                "pattern": "cse100 prerequisite",
+                "type": "string",
+                "id": 55
+            },
+            {
+                "type": "string",
+                "pattern": "cse100_prerequisite"
+            }
+        ],
+        "tags": []
+    }
+]
